@@ -14,7 +14,7 @@ class Auth extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 14, 13, 12),
         appBar: AppBar(title: Text(">>Hinoki.auth", style: GoogleFonts.cormorantGaramond(color: Color.fromARGB(255, 190, 56, 79), fontSize: 34, fontWeight: FontWeight.w800),), backgroundColor: Color.fromARGB(255, 190, 56, 79),),
-        body: Center(child: Text("Hi, user, please auth.")),
+        body: Center(child: Text("Test")),
       ),
     );
   }
