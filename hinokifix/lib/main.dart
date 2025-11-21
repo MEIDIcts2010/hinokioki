@@ -4,6 +4,8 @@ import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hinokifix/activity/auth_activity.dart';
 import 'package:hinokifix/activity/home.dart';
+import 'activity/today_activity.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -29,6 +31,11 @@ class MyApp extends StatelessWidget {
           return const Auth();  
         },
       ),
+      routes: {
+        "/home": (context) => Home(),
+        "/today": (context) => Today(),
+        "/auth": (context) => Auth()
+      },
     );
   }
 }

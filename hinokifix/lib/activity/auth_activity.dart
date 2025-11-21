@@ -74,9 +74,29 @@ class _AuthState extends State<Auth> {
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
-              "Привет! Авторизуйся в Hinoki",
+              "WELCOME",
               style: GoogleFonts.tiny5(
-                fontSize: 20,
+                fontSize: 40,
+                color: Color.fromARGB(255, 190, 56, 79),
+              ),
+            ),
+          ),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "TO",
+              style: GoogleFonts.tiny5(
+                fontSize: 40,
+                color: Color.fromARGB(255, 190, 56, 79),
+              ),
+            ),
+          ),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "HINOKI !!!",
+              style: GoogleFonts.tiny5(
+                fontSize: 40,
                 color: Color.fromARGB(255, 190, 56, 79),
               ),
             ),
