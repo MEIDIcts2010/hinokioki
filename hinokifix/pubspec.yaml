@@ -26,3 +26,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: NuromMedium  # Название шрифта
+      fonts:
+        - asset: assets/Nurom Medium.ttf
