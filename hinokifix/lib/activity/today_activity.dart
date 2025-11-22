@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+
+
 class Today extends StatefulWidget {
   const Today({super.key});
 
@@ -42,7 +44,7 @@ class _TodayState extends State<Today> {
               ),
               IconButton(
                 onPressed: () {
-                  _addNote();
+                  Navigator.pushReplacementNamed(context, "/editnote");
                 },
                 icon: Icon(Icons.add_circle_outline),
                 color: Color.fromARGB(255, 190, 56, 79),
