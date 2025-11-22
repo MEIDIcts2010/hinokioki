@@ -24,6 +24,12 @@ class Home extends StatelessWidget {
             },
             child: Text("Заметки"),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "/note");
+            },
+            child: Text("ЭкранЗАметки"),
+          ),
         ],
       ),
     );

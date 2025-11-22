@@ -3,7 +3,7 @@ import 'package:hinokifix/assets/meme_dart_full.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
 
 
 class Today extends StatefulWidget {
@@ -66,6 +66,38 @@ class _TodayState extends State<Today> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start, // важно!
                   children: [
+                    Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: CarouselSlider(
+                            options: CarouselOptions(
+                              height: 200,
+                              autoPlay: true,
+                              enlargeCenterPage: true,
+                              viewportFraction: 0.8,
+                              aspectRatio: 16/9,
+                            ),
+                            items: [
+                              'https://i1.sndcdn.com/artworks-Ovyz65Hoj80u43Gf-LtzBbw-t500x500.jpg',
+                              'https://e.snmc.io/i/600/s/540d1241a8254399515945c7591eb4f1/12614569/5mewmet-robloxcore-season-cover-art.jpg',
+                              'https://top-pesen.ru/uploads/posts/2025-10/5mewmet-zima.jpg',
+                              'https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_67668e2e564b8316f48b6005_67668e2e564b8316f48b6007/scale_1200',
+                            ].map((url) {
+                              return Builder(
+                                builder: (BuildContext context) {
+                                  return ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.network(
+                                      url,
+                                      fit: BoxFit.cover,
+                                      width: double.infinity,
+                                    ),
+                                  );
+                                },
+                              );
+                            }).toList(),
+                          ),
+                        ),
+                    
                     Text(
                       getFormattedDate(),
                       style: TextStyle(

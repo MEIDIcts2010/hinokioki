@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hinokifix/activity/Note.dart';
 import 'package:hinokifix/activity/addNote.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         "/home": (context) => Home(),
         "/today": (context) => Today(),
         "/auth": (context) => Auth(),
-        "/editnote": (context) => addNotes()
+        "/editnote": (context) => addNotes(),
+        "/note": (context) => Notes()
       },
     );
   }
